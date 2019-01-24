@@ -1,0 +1,12 @@
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\Negocios.dll
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Thiago\source\repos\Temporada1\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Thiago\source\repos\Temporada1\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\Thiago\source\repos\Temporada1\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\source\repos\Temporada1\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\Thiago\source\repos\Temporada1\Negocios\obj\Debug\Negocios.dll
+C:\Users\Thiago\source\repos\Temporada1\Negocios\obj\Debug\Negocios.pdb

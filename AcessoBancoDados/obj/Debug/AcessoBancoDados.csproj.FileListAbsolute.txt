@@ -1,0 +1,7 @@
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojAssemblyReference.cache
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Thiago\source\repos\Temporada1\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb

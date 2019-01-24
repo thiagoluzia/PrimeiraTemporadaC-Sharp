@@ -1,0 +1,6 @@
+C:\Users\Thiago\source\repos\Temporada1\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Thiago\source\repos\Temporada1\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Thiago\source\repos\Temporada1\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojAssemblyReference.cache
+C:\Users\Thiago\source\repos\Temporada1\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\source\repos\Temporada1\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Thiago\source\repos\Temporada1\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
