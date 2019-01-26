@@ -14,10 +14,13 @@ namespace Apresentacao
 {
     public partial class FrmClienteCadastrar : Form
     {
-
+        //criando variaveis da classe, para serem usadas em qualquer parte do codigo dentro desse namespace
+        AcaoNaTela acaoNaTelaSelecionada;
         public FrmClienteCadastrar(AcaoNaTela acaoNaTela, Cliente cliente)//MODIFICANDO O CONSTRUTOR PARA QUE ELE POSSA UTILIZAR O OBJETO TRANSFERENCIA E EFETUAR AS OPERAÇÕES NO BANCO LEVANDO OS DADOS DO CLIENTE
         {
             InitializeComponent();
+            acaoNaTelaSelecionada = acaoNaTela;//inicializando a variavel da classe
+
             if (acaoNaTela.Equals(AcaoNaTela.Inserir))
             {
                 this.Text = "Inserir Cliente";//Abre o form so que com nome diferente
@@ -86,6 +89,19 @@ namespace Apresentacao
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            //VERIFICAR SE É  INSERÇAO OU ALTERAÇÃO
+            if (acaoNaTelaSelecionada.Equals(AcaoNaTela.Inserir))
+            {
+
+            }
+            else if (acaoNaTelaSelecionada.Equals(AcaoNaTela.Alterar))
+            {
+
+            }
         }
     }
 }
