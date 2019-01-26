@@ -17,3 +17,4 @@ C:\Users\Thiago\source\repos\Temporada1\Apresentacao\obj\Debug\Apresentacao.cspr
 C:\Users\Thiago\source\repos\Temporada1\Apresentacao\obj\Debug\Apresentacao.csproj.CopyComplete
 C:\Users\Thiago\source\repos\Temporada1\Apresentacao\obj\Debug\Apresentacao.exe
 C:\Users\Thiago\source\repos\Temporada1\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Thiago\source\repos\Temporada1\Apresentacao\obj\Debug\Apresentacao.FrmClienteCadastrar.resources

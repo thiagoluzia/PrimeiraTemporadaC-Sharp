@@ -19,6 +19,7 @@ namespace Apresentacao
         public FrmClienteSelecionar()
         {
             InitializeComponent();
+
         }
 
         private void buttonPesquisar_Click(object sender, EventArgs e)
@@ -66,8 +67,9 @@ namespace Apresentacao
             }
 
             //PEGAR CLIENTE SELECIONADO
-            Cliente clienteSelecionado = new Cliente();
-            clienteSelecionado.IdCliente = int.Parse(dataGridViewPrincipal.CurrentRow.Cells[0].Value.ToString());//Caso o valor //do IdCliente esteja na célula [0], senão indica a posição certa.
+            Cliente clienteSelecionado = dataGridViewPrincipal.SelectedRows[0].DataBoundItem as Cliente;
+            //Caso o valor //do IdCliente esteja na célula [0], senão indica a posição certa.
+
 
 
             //4º INSTANCIAR A REGRA DE NEGOCIO
@@ -78,18 +80,37 @@ namespace Apresentacao
 
             //VERIFICAR SE EXCLUIU COM SUCESSO
             try
-            { 
-                int idCliente = int.Parse(retorno);//verificando se a string tem o valor int
-                MessageBox.Show("Cliente Excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AtualizarGrid();
+            {
+                int idCliente;
+                bool boolSucesso = int.TryParse(retorno, out idCliente);//verificando se a string tem o valor int
+                MessageBox.Show("O Cliente de ID" + idCliente.ToString() + " Foi excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+                //ATUALIZAR O GRID, POIS SÓ EXCLUIR ELE NAO SOME DO GRID NA HORA.
+                AtualizarGrid();
             }
             catch
             {
-               
+                MessageBox.Show("Não foi possível, excluir. Detalhes: " + retorno, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+        }
 
+        private void buttonInserir_Click(object sender, EventArgs e)
+        {
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir);//AcaoNaTela.Inserir foi inserido depois em aulas de enumeradores
+            frmClienteCadastrar.ShowDialog();
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar);
+            frmClienteCadastrar.ShowDialog();
+        }
+
+        private void buttonConsultar_Click(object sender, EventArgs e)
+        {
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Consultar);
+            frmClienteCadastrar.ShowDialog();
         }
     }
 }
