@@ -33,9 +33,9 @@
             this.labelDataNascimento = new System.Windows.Forms.Label();
             this.labelSexo = new System.Windows.Forms.Label();
             this.labelLimiteCompra = new System.Windows.Forms.Label();
-            this.textBoxCadastro = new System.Windows.Forms.TextBox();
+            this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLimiteCompra = new System.Windows.Forms.TextBox();
             this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
             this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
             this.dateTimeDataNascimento = new System.Windows.Forms.DateTimePicker();
@@ -88,14 +88,14 @@
             this.labelLimiteCompra.TabIndex = 9;
             this.labelLimiteCompra.Text = "Limite Compra";
             // 
-            // textBoxCadastro
+            // textBoxCodigo
             // 
-            this.textBoxCadastro.Location = new System.Drawing.Point(13, 30);
-            this.textBoxCadastro.Name = "textBoxCadastro";
-            this.textBoxCadastro.ReadOnly = true;
-            this.textBoxCadastro.Size = new System.Drawing.Size(65, 20);
-            this.textBoxCadastro.TabIndex = 1;
-            this.textBoxCadastro.TabStop = false;
+            this.textBoxCodigo.Location = new System.Drawing.Point(13, 30);
+            this.textBoxCodigo.Name = "textBoxCodigo";
+            this.textBoxCodigo.ReadOnly = true;
+            this.textBoxCodigo.Size = new System.Drawing.Size(65, 20);
+            this.textBoxCodigo.TabIndex = 1;
+            this.textBoxCodigo.TabStop = false;
             // 
             // textBoxNome
             // 
@@ -104,12 +104,12 @@
             this.textBoxNome.Size = new System.Drawing.Size(294, 20);
             this.textBoxNome.TabIndex = 3;
             // 
-            // textBox3
+            // textBoxLimiteCompra
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.textBoxLimiteCompra.Location = new System.Drawing.Point(12, 242);
+            this.textBoxLimiteCompra.Name = "textBoxLimiteCompra";
+            this.textBoxLimiteCompra.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLimiteCompra.TabIndex = 10;
             // 
             // radioButtonMasculino
             // 
@@ -170,9 +170,9 @@
             this.Controls.Add(this.dateTimeDataNascimento);
             this.Controls.Add(this.radioButtonFeminino);
             this.Controls.Add(this.radioButtonMasculino);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxLimiteCompra);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.textBoxCadastro);
+            this.Controls.Add(this.textBoxCodigo);
             this.Controls.Add(this.labelLimiteCompra);
             this.Controls.Add(this.labelSexo);
             this.Controls.Add(this.labelDataNascimento);
@@ -196,9 +196,9 @@
         private System.Windows.Forms.Label labelDataNascimento;
         private System.Windows.Forms.Label labelSexo;
         private System.Windows.Forms.Label labelLimiteCompra;
-        private System.Windows.Forms.TextBox textBoxCadastro;
+        private System.Windows.Forms.TextBox textBoxCodigo;
         private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLimiteCompra;
         private System.Windows.Forms.RadioButton radioButtonMasculino;
         private System.Windows.Forms.RadioButton radioButtonFeminino;
         private System.Windows.Forms.DateTimePicker dateTimeDataNascimento;

@@ -97,19 +97,42 @@ namespace Apresentacao
 
         private void buttonInserir_Click(object sender, EventArgs e)
         {
-            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir);//AcaoNaTela.Inserir foi inserido depois em aulas de enumeradores
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir, null);//AcaoNaTela.Inserir foi inserido depois em aulas de enumeradores //DEVO PASSAR COMO PARAMETRO UM CLIENTE POREM POR SER UM NOVO CLIENTE USO O NULL #AULA ALTERAR E CONSULTAR #
             frmClienteCadastrar.ShowDialog();
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar);
+            //1º VERIFICAR SE TEM REGISTRO SELECIONADO 
+            if (dataGridViewPrincipal.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum cliente selecionado");
+                return;
+            }
+            //2ºPEGAR CLIENTE SELECIONADO
+            Cliente clienteSelecionado = new Cliente();
+            clienteSelecionado = dataGridViewPrincipal.SelectedRows[0].DataBoundItem as Cliente;
+
+            //3ºINSTANCIA O FORMULARIO DE CADASTRO *JA SE ENCONTRA INSTANCIADO, FEITO ANTERIORMENTE, RESTANDO AGORA PASSAR SOMENTE O NOVO PARAMETRO,  QUE É CLIENTE SELECIONADO
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar, clienteSelecionado);
             frmClienteCadastrar.ShowDialog();
         }
 
         private void buttonConsultar_Click(object sender, EventArgs e)
         {
-            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Consultar);
+            //1º VERIFICAR SE TEM REGISTRO SELECIONADO 
+            if (dataGridViewPrincipal.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum cliente selecionado");
+                return;
+            }
+            //2ºPEGAR CLIENTE SELECIONADO
+            Cliente clienteSelecionado = new Cliente();
+            clienteSelecionado = dataGridViewPrincipal.SelectedRows[0].DataBoundItem as Cliente;
+
+            //3ºINSTANCIA O FORMULARIO DE CADASTRO *JA SE ENCONTRA INSTANCIADO, FEITO ANTERIORMENTE, RESTANDO AGORA PASSAR SOMENTE O NOVO PARAMETRO,  QUE É CLIENTE SELECIONADO
+
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Consultar, clienteSelecionado);
             frmClienteCadastrar.ShowDialog();
         }
     }
