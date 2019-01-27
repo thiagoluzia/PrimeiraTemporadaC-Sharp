@@ -98,7 +98,13 @@ namespace Apresentacao
         private void buttonInserir_Click(object sender, EventArgs e)
         {
             FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir, null);//AcaoNaTela.Inserir foi inserido depois em aulas de enumeradores //DEVO PASSAR COMO PARAMETRO UM CLIENTE POREM POR SER UM NOVO CLIENTE USO O NULL #AULA ALTERAR E CONSULTAR #
-            frmClienteCadastrar.ShowDialog();
+            //atualizar o grid apos inserir um dado com sucesso
+            DialogResult dialogResult = frmClienteCadastrar.ShowDialog();
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                AtualizarGrid();
+            }
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)

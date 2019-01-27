@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //COM ISSO POSSO USAR OS OBJETOS CONTIDOS EM OBJETOS TRANSFERENCIA 
 using ObjetoTransferencia;
+using Negocios;
 
 namespace Apresentacao
 {
@@ -96,6 +97,43 @@ namespace Apresentacao
             //VERIFICAR SE É  INSERÇAO OU ALTERAÇÃO
             if (acaoNaTelaSelecionada.Equals(AcaoNaTela.Inserir))
             {
+                //instanciando um cliente 
+                Cliente cliente = new Cliente();
+                //as propriedades do cliente recebendo dados pelos componentes
+                cliente.Nome = textBoxNome.Text;
+                cliente.DataNascimento = dateTimeDataNascimento.Value;
+                //verificando qual campo esta checado, masculino ou feminino
+                if(radioButtonMasculino.Checked == true)
+                {
+                    cliente.Sexo = true;
+                }
+                else
+                {
+                    cliente.Sexo = false;
+                }
+                //Convertendo um string para decimal
+                cliente.LimiteCompra = Convert.ToDecimal(textBoxLimiteCompra.Text);
+                //instanciando a regra de negocio, la que tera os parametros para inserir
+                ClienteNegocios clienteNegocio = new ClienteNegocios();
+                string retorno = clienteNegocio.Inserir(cliente);
+
+                //tentar converter para inteiro o retorno da procedure
+                //se de certo é porque devolveu o codigo do cliente 
+                //se de errado tem a mensagem de erro
+                try
+                {
+                    int IdCliente = Convert.ToInt32(retorno);
+                    MessageBox.Show("Cliente inserido com sucesso. codigo : " + retorno.ToString());
+                    this.DialogResult = DialogResult.Yes;
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Não foi possivel inserir o cliente. Detalhes: " + retorno, "Erro", MessageBoxButtons.OK , MessageBoxIcon.Error);
+                    this.DialogResult = DialogResult.No;
+                }
+
 
             }
             else if (acaoNaTelaSelecionada.Equals(AcaoNaTela.Alterar))
