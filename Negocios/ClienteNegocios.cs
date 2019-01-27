@@ -71,8 +71,8 @@ namespace Negocios
             {
                 acessoDadosSqlServer.LimparParametros();
                 acessoDadosSqlServer.AdcionarParametros("@IdCliente", cliente.IdCliente);
-               return acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspClienteExcluir").ToString();//COM PROCEDURE CODIGO SQL NO BANCO
-
+               acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspClienteExcluir").ToString();//COM PROCEDURE CODIGO SQL NO BANCO
+                return Convert.ToString(cliente.IdCliente);
                //return acessoDadosSqlServer.ExecutarManipulacao(CommandType.Text, "DELETE FROM tblCliente WHERE IdCliente = @").ToString();//SEM PROCEDURE, CODIGO SQL NA PASSAGEM DE PARAMETROS
 
             }

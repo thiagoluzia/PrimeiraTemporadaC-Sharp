@@ -68,9 +68,7 @@ namespace Apresentacao
 
             //PEGAR CLIENTE SELECIONADO
             Cliente clienteSelecionado = dataGridViewPrincipal.SelectedRows[0].DataBoundItem as Cliente;
-            //Caso o valor //do IdCliente esteja na célula [0], senão indica a posição certa.
-
-
+            //Caso o valor //do IdCliente esteja na célula [0], senão indica a posição certa
 
             //4º INSTANCIAR A REGRA DE NEGOCIO
             ClienteNegocios clienteNegocios = new ClienteNegocios();
@@ -83,7 +81,7 @@ namespace Apresentacao
             {
                 int idCliente;
                 bool boolSucesso = int.TryParse(retorno, out idCliente);//verificando se a string tem o valor int
-                MessageBox.Show("O Cliente de ID" + idCliente.ToString() + " Foi excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("O Cliente de ID: ( " + idCliente.ToString() + " ) Foi excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //ATUALIZAR O GRID, POIS SÓ EXCLUIR ELE NAO SOME DO GRID NA HORA.
                 AtualizarGrid();
