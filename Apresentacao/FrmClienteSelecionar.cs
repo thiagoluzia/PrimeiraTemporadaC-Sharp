@@ -114,12 +114,15 @@ namespace Apresentacao
                 return;
             }
             //2ºPEGAR CLIENTE SELECIONADO
-            Cliente clienteSelecionado = new Cliente();
-            clienteSelecionado = dataGridViewPrincipal.SelectedRows[0].DataBoundItem as Cliente;
+            Cliente clienteSelecionado =  dataGridViewPrincipal.SelectedRows[0].DataBoundItem as Cliente;
 
             //3ºINSTANCIA O FORMULARIO DE CADASTRO *JA SE ENCONTRA INSTANCIADO, FEITO ANTERIORMENTE, RESTANDO AGORA PASSAR SOMENTE O NOVO PARAMETRO,  QUE É CLIENTE SELECIONADO
             FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar, clienteSelecionado);
-            frmClienteCadastrar.ShowDialog();
+            DialogResult resultado = frmClienteCadastrar.ShowDialog();
+            if(resultado == DialogResult.Yes)
+            {
+                AtualizarGrid();
+            }
         }
 
         private void buttonConsultar_Click(object sender, EventArgs e)
