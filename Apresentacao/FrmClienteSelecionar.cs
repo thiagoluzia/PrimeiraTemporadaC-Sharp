@@ -16,6 +16,15 @@ namespace Apresentacao
 {
     public partial class FrmClienteSelecionar : Form
     {
+        //CONFIGURA O DATAGRID PARA NAO PERDER AS CONFIGURAÇÕES 
+        public void configuraDataGridView()
+        {
+            dataGridViewPrincipal.Columns[0].HeaderText = "Código";
+            dataGridViewPrincipal.Columns[1].HeaderText = "Nome";
+            dataGridViewPrincipal.Columns[2].HeaderText = "Nascimento";
+            dataGridViewPrincipal.Columns[3].HeaderText = "Sexo";
+            dataGridViewPrincipal.Columns[4].HeaderText = "Limite";
+        }
         public FrmClienteSelecionar()
         {
             InitializeComponent();
@@ -41,6 +50,7 @@ namespace Apresentacao
 
             dataGridViewPrincipal.Update();//ATUALIZAR OS DADOS NO GRID
             dataGridViewPrincipal.Refresh();//PARA ATUALIZADA A VISUALIZAÇÃO
+            configuraDataGridView();//PERMANECE A  FORMATAÇÃO DO DATAGRID
         }
         private void buttonFechar_Click(object sender, EventArgs e)
         {
